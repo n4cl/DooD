@@ -3,7 +3,13 @@ services:
     dood:
         build:
             context: .
+        environment:
+            - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+            - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+            - AWS_ACCOUNT_ID=${AWS_ACCOUNT_ID}
+            - AWS_CLI_REGION=${AWS_CLI_REGION}
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
+            - app:/usr/local/app
         container_name: dood
         tty: true
