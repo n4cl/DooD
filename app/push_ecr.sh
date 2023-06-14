@@ -13,11 +13,11 @@ push_ecr() {
 }
 
 if [ -z "$1" ]; then
-    echo "第1引数がありません"
+    echo "第1引数(image_name)がありません"
     exit 1
 fi
 if [ -z "$2" ]; then
-    echo "第2引数がありません"
+    echo "第2引数(ecr_repository_name)がありません"
     exit 1
 fi
 

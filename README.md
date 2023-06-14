@@ -4,5 +4,5 @@ DooD
 ECR にイメージを登録
 
 ```
-./build.sh ${docker-image} ${ecr_repository}
+./push_ecr.sh ${docker_image} ${ecr_repository}
 ```
